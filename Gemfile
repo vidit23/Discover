@@ -15,6 +15,7 @@ gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'simple_form', '~> 3.2'
 gem 'devise', '~> 3.5', '>= 3.5.2'
 gem 'paperclip', '~> 4.3', '>= 4.3.1'
+gem 'acts_as_votable', '~> 0.10.0'
 
 group :development, :test do
   gem 'byebug'
