@@ -5,6 +5,9 @@ Rails.application.routes.draw do
       get "like", to: "posts#upvote"
       get "dislike", to: "posts#downvote"
     end
+    collection do
+      get 'search'
+    end
     resources :comments
   end
 
