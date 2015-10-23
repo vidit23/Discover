@@ -11,13 +11,13 @@
   %header
     .wrapper.clearfix
       #logo= link_to "Muse", root_path
-      = form_tag search_posts_path, method: :get, role: "search" do
-        %p
+      %nav
+        = form_tag search_posts_path, method: :get, role: "search" do
           = text_field_tag :search, params[:search]
           = submit_tag "Search", name: nil, class: "button"
-      %nav
         - if user_signed_in?
           = link_to current_user.name, edit_user_registration_path
+          = link_to "Sign Out", destroy_user_session_path, :method => :delete
           = link_to "Add New Inspiration", new_post_path, class: "button"
         - else
           = link_to "Sign in", new_user_session_path
