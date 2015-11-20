@@ -10,6 +10,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def autocomplete
+    render json: Post.search(params[:search], autocomplete: true, limit: 10).map(&:title)
+  end
+
   def index
     @posts = Post.all.order("created_at DESC")
   end

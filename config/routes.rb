@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     end
     collection do
       get 'search'
+      get :autocomplete
     end
     resources :comments
   end

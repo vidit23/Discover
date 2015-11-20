@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   acts_as_votable
-  searchkick
+  searchkick autocomplete: ['title']
   belongs_to :user
   has_many :comments
   has_attached_file :image, styles: { medium: "700x500>", small: "350x250>" }
